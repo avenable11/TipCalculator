@@ -49,24 +49,26 @@
     app:layout_constraintStart_toStartOf="@+id/billAmountEditText"
     app:layout_constraintTop_toTopOf="@+id/textView2">
 
-    <Button
-      android:id="@+id/percentUpButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="+" />
-
-    <Button
-      android:id="@+id/percentDownButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="-" />
-
     <TextView
-      android:id="@+id/percentTextView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/default_tip"
-      android:textSize="20sp" />
+        android:id="@+id/percentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_tip"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/percentUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onPercentClick"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/percentDownButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onPercentClick"
+        android:text="-" />
 
   </LinearLayout>
 
@@ -112,19 +114,22 @@
     app:layout_constraintVertical_bias="1.0" />
 
   <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="40dp"
-    android:orientation="vertical"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-    <Button
-      android:id="@+id/calculateButton"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/calc" />
+      android:layout_marginLeft="8dp"
+      android:layout_marginTop="40dp"
+      android:layout_marginRight="8dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onCalculateClick"
+        android:text="@string/calc" />
   </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
